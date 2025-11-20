@@ -1,6 +1,10 @@
 const wordDatabase = {
   suroboyoan: [
-    { word: "koncoku", hint: "Teman dalam bahasa Surabaya", category: "Sosial" },
+    {
+      word: "koncoku",
+      hint: "Teman dalam bahasa Surabaya",
+      category: "Sosial",
+    },
     { word: "arek", hint: "Anak/orang muda", category: "Sosial" },
     { word: "sampean", hint: "Anda/kamu (sopan)", category: "Sapaan" },
     { word: "enyong", hint: "Saya/aku (kasar)", category: "Sapaan" },
@@ -42,7 +46,11 @@ const wordDatabase = {
     { word: "tahu", hint: "Tahu", category: "Makanan" },
     { word: "tempe", hint: "Tempe", category: "Makanan" },
     { word: "sambel", hint: "Sambal", category: "Makanan" },
-    { word: "rawon", hint: "Makanan khas Surabaya berkuah hitam", category: "Makanan" },
+    {
+      word: "rawon",
+      hint: "Makanan khas Surabaya berkuah hitam",
+      category: "Makanan",
+    },
     { word: "rujak", hint: "Rujak cingur", category: "Makanan" },
     { word: "esuk", hint: "Pagi", category: "Waktu" },
     { word: "siang", hint: "Siang", category: "Waktu" },
@@ -69,15 +77,31 @@ const wordDatabase = {
     { word: "wagu", hint: "Aneh/tidak bagus", category: "Sifat" },
     { word: "pinter", hint: "Pintar", category: "Sifat" },
     { word: "bodoh", hint: "Bodoh", category: "Sifat" },
-    { word: "dokar", hint: "Kendaraan tradisional beroda ditarik kuda", category: "Benda" },
+    {
+      word: "dokar",
+      hint: "Kendaraan tradisional beroda ditarik kuda",
+      category: "Benda",
+    },
     { word: "buku", hint: "Buku", category: "Benda" },
     { word: "meja", hint: "Meja", category: "Benda" },
     { word: "kursi", hint: "Kursi", category: "Benda" },
-    { word: "bakso", hint: "Makanan berkuah dengan bola daging", category: "Makanan" },
-    { word: "ceker", hint: "Ceker ayam pedas khas Malang", category: "Makanan" },
+    {
+      word: "bakso",
+      hint: "Makanan berkuah dengan bola daging",
+      category: "Makanan",
+    },
+    {
+      word: "ceker",
+      hint: "Ceker ayam pedas khas Malang",
+      category: "Makanan",
+    },
     { word: "apel", hint: "Buah khas Malang", category: "Makanan" },
     { word: "aloon", hint: "Alun-alun", category: "Tempat" },
-    { word: "gunung", hint: "Gunung (Malang banyak gunung)", category: "Tempat" },
+    {
+      word: "gunung",
+      hint: "Gunung (Malang banyak gunung)",
+      category: "Tempat",
+    },
     { word: "kampung", hint: "Kampung/desa", category: "Tempat" },
     { word: "apo", hint: "Apa", category: "Tanya" },
     { word: "sopo", hint: "Siapa", category: "Tanya" },
@@ -106,7 +130,11 @@ const wordDatabase = {
     { word: "pepak", hint: "Lengkap", category: "Sifat" },
     { word: "serat", hint: "Buku/tulisan krama", category: "Benda" },
     { word: "wayang", hint: "Wayang kulit", category: "Budaya" },
-    { word: "gamelan", hint: "Alat musik tradisional Jawa", category: "Budaya" },
+    {
+      word: "gamelan",
+      hint: "Alat musik tradisional Jawa",
+      category: "Budaya",
+    },
     { word: "ndherek", hint: "Ikut (krama)", category: "Kata Kerja" },
     { word: "dhahar", hint: "Makan (krama)", category: "Kata Kerja" },
     { word: "tindak", hint: "Pergi (krama)", category: "Kata Kerja" },
@@ -149,43 +177,99 @@ const wordDatabase = {
     { word: "ngalap", hint: "Mengambil (krama)", category: "Kata Kerja" },
   ],
   indonesia: [
-    { word: "komputer", hint: "Alat elektronik untuk bekerja", category: "Teknologi" },
-    { word: "internet", hint: "Jaringan komputer global", category: "Teknologi" },
+    {
+      word: "komputer",
+      hint: "Alat elektronik untuk bekerja",
+      category: "Teknologi",
+    },
+    {
+      word: "internet",
+      hint: "Jaringan komputer global",
+      category: "Teknologi",
+    },
     { word: "aplikasi", hint: "Program software", category: "Teknologi" },
     { word: "website", hint: "Halaman di internet", category: "Teknologi" },
     { word: "smartphone", hint: "Telepon pintar", category: "Teknologi" },
     { word: "laptop", hint: "Komputer portable", category: "Teknologi" },
     { word: "sekolah", hint: "Tempat menuntut ilmu", category: "Tempat" },
     { word: "universitas", hint: "Perguruan tinggi", category: "Tempat" },
-    { word: "perpustakaan", hint: "Tempat menyimpan banyak buku", category: "Tempat" },
-    { word: "belajar", hint: "Aktivitas menuntut ilmu", category: "Kata Kerja" },
+    {
+      word: "perpustakaan",
+      hint: "Tempat menyimpan banyak buku",
+      category: "Tempat",
+    },
+    {
+      word: "belajar",
+      hint: "Aktivitas menuntut ilmu",
+      category: "Kata Kerja",
+    },
     { word: "guru", hint: "Orang yang mengajar", category: "Profesi" },
     { word: "murid", hint: "Orang yang belajar", category: "Profesi" },
     { word: "mahasiswa", hint: "Pelajar universitas", category: "Profesi" },
     { word: "dosen", hint: "Pengajar di universitas", category: "Profesi" },
     { word: "buku", hint: "Media untuk membaca", category: "Alat Tulis" },
-    { word: "pensil", hint: "Alat tulis yang bisa dihapus", category: "Alat Tulis" },
+    {
+      word: "pensil",
+      hint: "Alat tulis yang bisa dihapus",
+      category: "Alat Tulis",
+    },
     { word: "pulpen", hint: "Alat tulis tinta", category: "Alat Tulis" },
-    { word: "penghapus", hint: "Alat untuk menghapus tulisan", category: "Alat Tulis" },
-    { word: "penggaris", hint: "Alat untuk membuat garis lurus", category: "Alat Tulis" },
-    { word: "kamus", hint: "Buku untuk cari arti kata", category: "Alat Tulis" },
+    {
+      word: "penghapus",
+      hint: "Alat untuk menghapus tulisan",
+      category: "Alat Tulis",
+    },
+    {
+      word: "penggaris",
+      hint: "Alat untuk membuat garis lurus",
+      category: "Alat Tulis",
+    },
+    {
+      word: "kamus",
+      hint: "Buku untuk cari arti kata",
+      category: "Alat Tulis",
+    },
     { word: "kertas", hint: "Media menulis", category: "Alat Tulis" },
     { word: "teman", hint: "Orang yang menemani kita", category: "Sosial" },
     { word: "sahabat", hint: "Teman dekat", category: "Sosial" },
     { word: "keluarga", hint: "Orang-orang terdekat", category: "Sosial" },
-    { word: "tetangga", hint: "Orang yang tinggal di sekitar rumah", category: "Sosial" },
+    {
+      word: "tetangga",
+      hint: "Orang yang tinggal di sekitar rumah",
+      category: "Sosial",
+    },
     { word: "makanan", hint: "Yang kita makan", category: "Konsumsi" },
     { word: "minuman", hint: "Yang kita minum", category: "Konsumsi" },
     { word: "sarapan", hint: "Makan pagi", category: "Konsumsi" },
-    { word: "makan", hint: "Aktivitas mengonsumsi makanan", category: "Kata Kerja" },
-    { word: "minum", hint: "Aktivitas mengonsumsi cairan", category: "Kata Kerja" },
+    {
+      word: "makan",
+      hint: "Aktivitas mengonsumsi makanan",
+      category: "Kata Kerja",
+    },
+    {
+      word: "minum",
+      hint: "Aktivitas mengonsumsi cairan",
+      category: "Kata Kerja",
+    },
     { word: "masak", hint: "Membuat makanan", category: "Kata Kerja" },
-    { word: "sepeda", hint: "Kendaraan roda dua kayuh", category: "Transportasi" },
-    { word: "motor", hint: "Kendaraan roda dua bermesin", category: "Transportasi" },
+    {
+      word: "sepeda",
+      hint: "Kendaraan roda dua kayuh",
+      category: "Transportasi",
+    },
+    {
+      word: "motor",
+      hint: "Kendaraan roda dua bermesin",
+      category: "Transportasi",
+    },
     { word: "mobil", hint: "Kendaraan roda empat", category: "Transportasi" },
     { word: "bus", hint: "Kendaraan umum besar", category: "Transportasi" },
     { word: "kereta", hint: "Transportasi rel", category: "Transportasi" },
-    { word: "pesawat", hint: "Alat transportasi udara", category: "Transportasi" },
+    {
+      word: "pesawat",
+      hint: "Alat transportasi udara",
+      category: "Transportasi",
+    },
     { word: "pohon", hint: "Tumbuhan besar berkayu", category: "Alam" },
     { word: "bunga", hint: "Bagian tanaman berwarna indah", category: "Alam" },
     { word: "gunung", hint: "Dataran tinggi", category: "Alam" },
@@ -205,10 +289,26 @@ const wordDatabase = {
     { word: "siang", hint: "Waktu tengah hari", category: "Waktu" },
     { word: "sore", hint: "Waktu menjelang malam", category: "Waktu" },
     { word: "malam", hint: "Waktu gelap", category: "Waktu" },
-    { word: "sepakbola", hint: "Olahraga menendang bola", category: "Olahraga" },
-    { word: "basket", hint: "Olahraga memasukkan bola ke ring", category: "Olahraga" },
-    { word: "voli", hint: "Olahraga memantulkan bola di net", category: "Olahraga" },
-    { word: "bulutangkis", hint: "Olahraga pakai raket dan kok", category: "Olahraga" },
+    {
+      word: "sepakbola",
+      hint: "Olahraga menendang bola",
+      category: "Olahraga",
+    },
+    {
+      word: "basket",
+      hint: "Olahraga memasukkan bola ke ring",
+      category: "Olahraga",
+    },
+    {
+      word: "voli",
+      hint: "Olahraga memantulkan bola di net",
+      category: "Olahraga",
+    },
+    {
+      word: "bulutangkis",
+      hint: "Olahraga pakai raket dan kok",
+      category: "Olahraga",
+    },
   ],
 };
 
@@ -239,7 +339,7 @@ function startGame() {
   gameMode = document.querySelector('input[name="gameMode"]:checked').value;
 
   // Set isHardMode berdasarkan gameMode
-  isHardMode = (gameMode === "hard");
+  isHardMode = gameMode === "hard";
 
   if (gameMode === "survival") {
     lives = 1;
@@ -268,10 +368,10 @@ function startGame() {
     gameMode === "survival"
       ? " (SURVIVAL MODE)"
       : gameMode === "speedrun"
-        ? " (SPEEDRUN MODE)"
-        : isHardMode
-          ? " (HARD MODE)"
-          : "";
+      ? " (SPEEDRUN MODE)"
+      : isHardMode
+      ? " (HARD MODE)"
+      : "";
 
   document.getElementById("languageTitle").textContent =
     languageTitles[currentLanguage] + modeSuffix;
@@ -434,10 +534,10 @@ function guessLetter() {
   if (found) {
     showMessage(
       '✅ Benar! Huruf "' +
-      input.toUpperCase() +
-      '" ada ' +
-      foundCount +
-      " kali!",
+        input.toUpperCase() +
+        '" ada ' +
+        foundCount +
+        " kali!",
       "green"
     );
     score += 10 * foundCount;
@@ -568,10 +668,10 @@ function wordCompleted() {
     score += streakBonus;
     showMessage(
       '🎉 Kata benar: "' +
-      currentWordObj.word +
-      '"! +' +
-      streakBonus +
-      " bonus streak!",
+        currentWordObj.word +
+        '"! +' +
+        streakBonus +
+        " bonus streak!",
       "green"
     );
   } else {
