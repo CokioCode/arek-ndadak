@@ -4,40 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css">
     <title>Game Tebak Kata - Multi Bahasa</title>
+    <style>
+      .gradient-bg {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+      }
+      .pulse-glow {
+        animation: pulse-glow 2s ease-in-out infinite;
+      }
+      @keyframes pulse-glow {
+        0%, 100% { box-shadow: 0 0 20px rgba(139, 92, 246, 0.5); }
+        50% { box-shadow: 0 0 40px rgba(139, 92, 246, 0.8); }
+      }
+    </style>
   </head>
-  <body class="min-h-screen gradient-bg flex items-center justify-center p-4">
+  <body class="min-h-screen gradient-bg flex items-center justify-center p-2 sm:p-4">
     
     <div class="fixed top-0 left-0 right-0 z-50 glass-effect shadow-lg">
-      <div class="max-w-4xl mx-auto px-6 py-4">
-        <h1 class="text-3xl font-bold text-center bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+      <div class="max-w-4xl mx-auto px-3 sm:px-6 py-3 sm:py-4">
+        <h1 class="text-xl sm:text-2xl md:text-3xl font-bold text-center bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
           🎮 Game Tebak Kata Multi Bahasa
         </h1>
       </div>
     </div>
 
-    <div id="gameContainer" class="w-full max-w-4xl mx-auto mt-24 mb-8">
+    <div id="gameContainer" class="w-full max-w-4xl mx-auto mt-20 sm:mt-24 mb-4 sm:mb-8">
       
-      <div id="setupScreen" class="glass-effect rounded-3xl shadow-2xl p-8 md:p-12">
-        <div class="text-center mb-8">
-          <div class="inline-block bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full p-4 mb-4">
-            <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div id="setupScreen" class="glass-effect rounded-2xl sm:rounded-3xl shadow-2xl p-4 sm:p-8 md:p-12">
+        <div class="text-center mb-6 sm:mb-8">
+          <div class="inline-block bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full p-3 sm:p-4 mb-3 sm:mb-4">
+            <svg class="w-12 h-12 sm:w-16 sm:h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
             </svg>
           </div>
-          <h2 class="text-3xl font-bold text-gray-800 mb-2">Atur Permainan</h2>
-          <p class="text-gray-600">Pilih bahasa dan mode favoritmu!</p>
+          <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">Atur Permainan</h2>
+          <p class="text-sm sm:text-base text-gray-600">Pilih bahasa dan mode favoritmu!</p>
         </div>
 
-        <div class="mb-8">
-          <label class="block text-lg font-semibold text-gray-700 mb-3 flex items-center gap-2">
-            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="mb-6 sm:mb-8">
+          <label class="block text-base sm:text-lg font-semibold text-gray-700 mb-2 sm:mb-3 flex items-center gap-2">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
             </svg>
             Pilih Bahasa
           </label>
-          <select id="languageSelect" class="w-full px-4 py-4 text-lg border-2 border-indigo-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all cursor-pointer bg-white hover:border-indigo-300">
+          <select id="languageSelect" class="w-full px-3 sm:px-4 py-3 sm:py-4 text-base sm:text-lg border-2 border-indigo-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all cursor-pointer bg-white hover:border-indigo-300">
             <option value="suroboyoan">Suroboyoan (50+ kata)</option>
             <option value="malangan">Malangan (40+ kata)</option>
             <option value="jawa">Jawa Krama (50+ kata)</option>
@@ -45,249 +60,244 @@
           </select>
         </div>
 
-        <div class="mb-8">
-          <label class="block text-lg font-semibold text-gray-700 mb-3 flex items-center gap-2">
-            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="mb-6 sm:mb-8">
+          <label class="block text-base sm:text-lg font-semibold text-gray-700 mb-2 sm:mb-3 flex items-center gap-2">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
             Pilih Mode Game
           </label>
-          <div class="space-y-3">
-            <label class="flex items-center p-4 border-2 border-gray-200 rounded-xl cursor-pointer hover:border-indigo-400 hover:bg-indigo-50 transition-all group">
-              <input type="radio" name="gameMode" value="classic" checked class="w-5 h-5 text-indigo-600 focus:ring-indigo-500" />
-              <div class="ml-4">
-                <span class="text-lg font-medium text-gray-800 group-hover:text-indigo-600">⚡ Classic</span>
-                <p class="text-sm text-gray-500">Tebak per huruf dengan santai</p>
+          <div class="space-y-2 sm:space-y-3">
+            <label class="flex items-center p-3 sm:p-4 border-2 border-gray-200 rounded-xl cursor-pointer hover:border-indigo-400 hover:bg-indigo-50 transition-all group">
+              <input type="radio" name="gameMode" value="classic" checked class="w-4 h-4 sm:w-5 sm:h-5 text-indigo-600 focus:ring-indigo-500 flex-shrink-0" />
+              <div class="ml-3 sm:ml-4">
+                <span class="text-base sm:text-lg font-medium text-gray-800 group-hover:text-indigo-600">⚡ Classic</span>
+                <p class="text-xs sm:text-sm text-gray-500">Tebak per huruf dengan santai</p>
               </div>
             </label>
-            <label class="flex items-center p-4 border-2 border-gray-200 rounded-xl cursor-pointer hover:border-orange-400 hover:bg-orange-50 transition-all group">
-              <input type="radio" name="gameMode" value="speedrun" class="w-5 h-5 text-orange-600 focus:ring-orange-500" />
-              <div class="ml-4">
-                <span class="text-lg font-medium text-gray-800 group-hover:text-orange-600">🚀 Speedrun</span>
-                <p class="text-sm text-gray-500">Tebak kata penuh dalam 60 detik!</p>
+            <label class="flex items-center p-3 sm:p-4 border-2 border-gray-200 rounded-xl cursor-pointer hover:border-orange-400 hover:bg-orange-50 transition-all group">
+              <input type="radio" name="gameMode" value="speedrun" class="w-4 h-4 sm:w-5 sm:h-5 text-orange-600 focus:ring-orange-500 flex-shrink-0" />
+              <div class="ml-3 sm:ml-4">
+                <span class="text-base sm:text-lg font-medium text-gray-800 group-hover:text-orange-600">🚀 Speedrun</span>
+                <p class="text-xs sm:text-sm text-gray-500">Tebak kata penuh dalam 60 detik!</p>
               </div>
             </label>
-            <label class="flex items-center p-4 border-2 border-gray-200 rounded-xl cursor-pointer hover:border-red-400 hover:bg-red-50 transition-all group">
-              <input type="radio" name="gameMode" value="survival" class="w-5 h-5 text-red-600 focus:ring-red-500" />
-              <div class="ml-4">
-                <span class="text-lg font-medium text-gray-800 group-hover:text-red-600">💀 Survival</span>
-                <p class="text-sm text-gray-500">1 nyawa, tanpa hint - berani?</p>
+            <label class="flex items-center p-3 sm:p-4 border-2 border-gray-200 rounded-xl cursor-pointer hover:border-red-400 hover:bg-red-50 transition-all group">
+              <input type="radio" name="gameMode" value="survival" class="w-4 h-4 sm:w-5 sm:h-5 text-red-600 focus:ring-red-500 flex-shrink-0" />
+              <div class="ml-3 sm:ml-4">
+                <span class="text-base sm:text-lg font-medium text-gray-800 group-hover:text-red-600">💀 Survival</span>
+                <p class="text-xs sm:text-sm text-gray-500">1 nyawa, tanpa hint - berani?</p>
               </div>
             </label>
           </div>
         </div>
 
-        <div class="mb-8">
-          <label class="flex items-center p-4 bg-gradient-to-r from-red-50 to-orange-50 border-2 border-red-200 rounded-xl cursor-pointer hover:border-red-400 transition-all">
-            <input type="checkbox" id="hardMode" class="w-6 h-6 text-red-600 rounded focus:ring-red-500" />
-            <div class="ml-4">
-              <span class="text-lg font-bold text-red-700">🔥 Mode Sulit</span>
-              <p class="text-sm text-red-600">Nyawa 3, tanpa kategori - untuk yang jagoan!</p>
+        <div class="mb-6 sm:mb-8">
+          <label class="flex items-center p-3 sm:p-4 bg-gradient-to-r from-red-50 to-orange-50 border-2 border-red-200 rounded-xl cursor-pointer hover:border-red-400 transition-all">
+            <input type="checkbox" id="hardMode" class="w-5 h-5 sm:w-6 sm:h-6 text-red-600 rounded focus:ring-red-500 flex-shrink-0" />
+            <div class="ml-3 sm:ml-4">
+              <span class="text-base sm:text-lg font-bold text-red-700">🔥 Mode Sulit</span>
+              <p class="text-xs sm:text-sm text-red-600">Nyawa 3, tanpa kategori - untuk yang jagoan!</p>
             </div>
           </label>
         </div>
 
-        <button onclick="startGame()" class="w-full py-5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white text-xl font-bold rounded-xl shadow-lg hover:shadow-xl transform transition-all pulse-glow">
+        <button onclick="startGame()" class="w-full py-4 sm:py-5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white text-lg sm:text-xl font-bold rounded-xl shadow-lg hover:shadow-xl transform transition-all pulse-glow">
           Mulai Petualangan! 🎯
         </button>
       </div>
 
-      <div id="gameScreen" style="display: none" class="glass-effect rounded-3xl shadow-2xl p-8 md:p-12">
+      <div id="gameScreen" style="display: none" class="glass-effect rounded-2xl sm:rounded-3xl shadow-2xl p-4 sm:p-8 md:p-12">
         
-        <h2 id="languageTitle" class="text-2xl font-bold text-center text-gray-800 mb-6"></h2>
+        <h2 id="languageTitle" class="text-xl sm:text-2xl font-bold text-center text-gray-800 mb-4 sm:mb-6"></h2>
         
-        <p id="gameStats" style="display: none;">
-          Nyawa: <span id="lives">5</span> ❤️ | Skor:
-          <span id="score">0</span> ⭐ | Level: <span id="level">1</span> |
-          Streak: <span id="streak">0</span> 🔥
-        </p>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-          <div class="bg-gradient-to-br from-red-100 to-red-200 rounded-xl p-4 text-center">
-            <div class="text-3xl mb-1">❤️</div>
-            <div class="text-sm text-red-700 font-medium">Nyawa</div>
-            <div id="lives" class="text-2xl font-bold text-red-800">5</div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 mb-4 sm:mb-6">
+          <div class="bg-gradient-to-br from-red-100 to-red-200 rounded-lg sm:rounded-xl p-2 sm:p-4 text-center">
+            <div class="text-xl sm:text-3xl mb-1">❤️</div>
+            <div class="text-xs sm:text-sm text-red-700 font-medium">Nyawa</div>
+            <div id="lives" class="text-lg sm:text-2xl font-bold text-red-800">5</div>
           </div>
-          <div class="bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-xl p-4 text-center">
-            <div class="text-3xl mb-1">⭐</div>
-            <div class="text-sm text-yellow-700 font-medium">Skor</div>
-            <div id="score" class="text-2xl font-bold text-yellow-800">0</div>
+          <div class="bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-lg sm:rounded-xl p-2 sm:p-4 text-center">
+            <div class="text-xl sm:text-3xl mb-1">⭐</div>
+            <div class="text-xs sm:text-sm text-yellow-700 font-medium">Skor</div>
+            <div id="score" class="text-lg sm:text-2xl font-bold text-yellow-800">0</div>
           </div>
-          <div class="bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl p-4 text-center">
-            <div class="text-3xl mb-1">🎯</div>
-            <div class="text-sm text-blue-700 font-medium">Level</div>
-            <div id="level" class="text-2xl font-bold text-blue-800">1</div>
+          <div class="bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg sm:rounded-xl p-2 sm:p-4 text-center">
+            <div class="text-xl sm:text-3xl mb-1">🎯</div>
+            <div class="text-xs sm:text-sm text-blue-700 font-medium">Level</div>
+            <div id="level" class="text-lg sm:text-2xl font-bold text-blue-800">1</div>
           </div>
-          <div class="bg-gradient-to-br from-orange-100 to-orange-200 rounded-xl p-4 text-center">
-            <div class="text-3xl mb-1">🔥</div>
-            <div class="text-sm text-orange-700 font-medium">Streak</div>
-            <div id="streak" class="text-2xl font-bold text-orange-800">0</div>
+          <div class="bg-gradient-to-br from-orange-100 to-orange-200 rounded-lg sm:rounded-xl p-2 sm:p-4 text-center">
+            <div class="text-xl sm:text-3xl mb-1">🔥</div>
+            <div class="text-xs sm:text-sm text-orange-700 font-medium">Streak</div>
+            <div id="streak" class="text-lg sm:text-2xl font-bold text-orange-800">0</div>
           </div>
         </div>
 
-        <p id="timerDisplay" style="display: none" class="text-center text-3xl font-bold text-red-600 bg-red-100 rounded-xl p-4 mb-6"></p>
+        <p id="timerDisplay" style="display: none" class="text-center text-2xl sm:text-3xl font-bold text-red-600 bg-red-100 rounded-xl p-3 sm:p-4 mb-4 sm:mb-6"></p>
 
-        <div id="categoryHint" class="bg-indigo-50 border-l-4 border-indigo-500 rounded-lg p-4 mb-4"></div>
+        <div id="categoryHint" class="bg-indigo-50 border-l-4 border-indigo-500 rounded-lg p-3 sm:p-4 mb-3 sm:mb-4 text-sm sm:text-base"></div>
         
-        <div class="bg-purple-50 rounded-xl p-6 mb-6">
+        <div class="bg-purple-50 rounded-lg sm:rounded-xl p-4 sm:p-6 mb-4 sm:mb-6">
           <div class="flex items-center gap-2 mb-2">
-            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
             </svg>
-            <h3 class="text-lg font-bold text-purple-700">Hint:</h3>
+            <h3 class="text-base sm:text-lg font-bold text-purple-700">Hint:</h3>
           </div>
-          <p id="hint" class="text-gray-700 text-lg"></p>
+          <p id="hint" class="text-gray-700 text-sm sm:text-lg"></p>
         </div>
 
-        <div class="bg-white rounded-xl shadow-inner p-8 mb-6 text-center">
-          <h3 class="text-sm font-semibold text-gray-600 mb-4 uppercase tracking-wide">Kata yang ditebak:</h3>
-          <p id="wordDisplay" class="text-4xl md:text-5xl font-bold text-indigo-600 tracking-widest font-mono mb-4"></p>
-          <p class="text-gray-500">
-            <svg class="w-5 h-5 inline-block mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="bg-white rounded-lg sm:rounded-xl shadow-inner p-4 sm:p-8 mb-4 sm:mb-6 text-center">
+          <h3 class="text-xs sm:text-sm font-semibold text-gray-600 mb-2 sm:mb-4 uppercase tracking-wide">Kata yang ditebak:</h3>
+          <p id="wordDisplay" class="text-2xl sm:text-4xl md:text-5xl font-bold text-indigo-600 tracking-wider sm:tracking-widest font-mono mb-2 sm:mb-4 break-all"></p>
+          <p class="text-xs sm:text-sm text-gray-500">
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 inline-block mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
             Panjang kata: <span id="wordLength" class="font-bold text-gray-700"></span> huruf
           </p>
         </div>
 
-        <div id="classicMode" class="mb-6">
-          <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6 space-y-4">
-            <h3 class="text-lg font-bold text-gray-800 mb-3">🎯 Tebak Huruf:</h3>
-            <div class="flex gap-3">
+        <div id="classicMode" class="mb-4 sm:mb-6">
+          <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg sm:rounded-xl p-4 sm:p-6 space-y-3 sm:space-y-4">
+            <h3 class="text-base sm:text-lg font-bold text-gray-800 mb-2 sm:mb-3">🎯 Tebak Huruf:</h3>
+            <div class="flex flex-col sm:flex-row gap-2 sm:gap-3">
               <input
                 type="text"
                 id="guessInput"
                 maxlength="1"
                 placeholder="Ketik 1 huruf"
                 autocomplete="off"
-                class="flex-1 px-6 py-4 text-2xl text-center font-bold border-2 border-indigo-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 uppercase"
+                class="flex-1 px-4 sm:px-6 py-3 sm:py-4 text-xl sm:text-2xl text-center font-bold border-2 border-indigo-300 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 uppercase"
               />
-              <button onclick="guessLetter()" class="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all">
+              <button onclick="guessLetter()" class="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white text-sm sm:text-base font-bold rounded-lg sm:rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all">
                 Tebak!
               </button>
             </div>
-            <button onclick="useHintBonus()" class="w-full py-3 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-bold rounded-xl shadow-md hover:shadow-lg transition-all">
+            <button onclick="useHintBonus()" class="w-full py-2.5 sm:py-3 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white text-sm sm:text-base font-bold rounded-lg sm:rounded-xl shadow-md hover:shadow-lg transition-all">
               💡 Buka 1 Huruf (Bonus: <span id="hintBonus">3</span>)
             </button>
-            <div class="bg-white rounded-lg p-4">
-              <p class="text-sm text-gray-600 mb-2">Huruf yang sudah ditebak:</p>
-              <p id="guessedLetters" class="text-xl font-mono font-bold text-indigo-600 tracking-wider"></p>
+            <div class="bg-white rounded-lg p-3 sm:p-4">
+              <p class="text-xs sm:text-sm text-gray-600 mb-2">Huruf yang sudah ditebak:</p>
+              <p id="guessedLetters" class="text-base sm:text-xl font-mono font-bold text-indigo-600 tracking-wider break-all"></p>
             </div>
           </div>
         </div>
 
-        <div id="speedrunMode" style="display: none" class="mb-6">
-          <div class="bg-gradient-to-r from-orange-50 to-red-50 rounded-xl p-6 space-y-4">
-            <h3 class="text-lg font-bold text-gray-800 mb-3">🚀 Tebak Kata Lengkap:</h3>
-            <div class="flex gap-3">
+        <div id="speedrunMode" style="display: none" class="mb-4 sm:mb-6">
+          <div class="bg-gradient-to-r from-orange-50 to-red-50 rounded-lg sm:rounded-xl p-4 sm:p-6 space-y-3 sm:space-y-4">
+            <h3 class="text-base sm:text-lg font-bold text-gray-800 mb-2 sm:mb-3">🚀 Tebak Kata Lengkap:</h3>
+            <div class="flex flex-col sm:flex-row gap-2 sm:gap-3">
               <input
                 type="text"
                 id="fullWordInput"
                 placeholder="Ketik kata lengkap"
                 autocomplete="off"
-                class="flex-1 px-6 py-4 text-xl font-bold border-2 border-orange-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500"
+                class="flex-1 px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-xl font-bold border-2 border-orange-300 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500"
               />
-              <button onclick="guessFullWord()" class="px-8 py-4 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all">
+              <button onclick="guessFullWord()" class="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white text-sm sm:text-base font-bold rounded-lg sm:rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all">
                 Tebak!
               </button>
             </div>
-            <div class="bg-white rounded-lg p-3 text-center">
-              <p class="text-gray-600">Kesempatan tersisa: <span id="attemptsLeft" class="text-2xl font-bold text-orange-600">3</span> / 3</p>
+            <div class="bg-white rounded-lg p-2 sm:p-3 text-center">
+              <p class="text-xs sm:text-sm text-gray-600">Kesempatan tersisa: <span id="attemptsLeft" class="text-xl sm:text-2xl font-bold text-orange-600">3</span> / 3</p>
             </div>
           </div>
         </div>
 
-        <p id="message" class="text-center text-xl font-bold text-gray-800 mb-6 min-h-[2rem]"></p>
+        <p id="message" class="text-center text-base sm:text-xl font-bold text-gray-800 mb-4 sm:mb-6 min-h-[2rem]"></p>
 
-        <details class="bg-gray-50 rounded-xl p-6 mb-6 cursor-pointer hover:bg-gray-100 transition-all">
-          <summary class="font-bold text-lg text-gray-800 flex items-center gap-2">
-            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <details class="bg-gray-50 rounded-lg sm:rounded-xl p-4 sm:p-6 mb-4 sm:mb-6 cursor-pointer hover:bg-gray-100 transition-all">
+          <summary class="font-bold text-base sm:text-lg text-gray-800 flex items-center gap-2">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
             </svg>
             📊 Statistik Game
           </summary>
-          <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
-            <div class="bg-white rounded-lg p-3 text-center">
-              <p class="text-sm text-gray-600">Total Kata</p>
-              <p id="totalWords" class="text-2xl font-bold text-indigo-600">0</p>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-4 mt-3 sm:mt-4">
+            <div class="bg-white rounded-lg p-2 sm:p-3 text-center">
+              <p class="text-xs sm:text-sm text-gray-600">Total Kata</p>
+              <p id="totalWords" class="text-xl sm:text-2xl font-bold text-indigo-600">0</p>
             </div>
-            <div class="bg-white rounded-lg p-3 text-center">
-              <p class="text-sm text-gray-600">Akurasi</p>
-              <p class="text-2xl font-bold text-green-600"><span id="accuracy">100</span>%</p>
+            <div class="bg-white rounded-lg p-2 sm:p-3 text-center">
+              <p class="text-xs sm:text-sm text-gray-600">Akurasi</p>
+              <p class="text-xl sm:text-2xl font-bold text-green-600"><span id="accuracy">100</span>%</p>
             </div>
-            <div class="bg-white rounded-lg p-3 text-center">
-              <p class="text-sm text-gray-600">Benar</p>
-              <p id="correctGuesses" class="text-2xl font-bold text-blue-600">0</p>
+            <div class="bg-white rounded-lg p-2 sm:p-3 text-center">
+              <p class="text-xs sm:text-sm text-gray-600">Benar</p>
+              <p id="correctGuesses" class="text-xl sm:text-2xl font-bold text-blue-600">0</p>
             </div>
-            <div class="bg-white rounded-lg p-3 text-center">
-              <p class="text-sm text-gray-600">Salah</p>
-              <p id="wrongGuesses" class="text-2xl font-bold text-red-600">0</p>
+            <div class="bg-white rounded-lg p-2 sm:p-3 text-center">
+              <p class="text-xs sm:text-sm text-gray-600">Salah</p>
+              <p id="wrongGuesses" class="text-xl sm:text-2xl font-bold text-red-600">0</p>
             </div>
-            <div class="bg-white rounded-lg p-3 text-center col-span-2">
-              <p class="text-sm text-gray-600">Waktu Main</p>
-              <p id="playTime" class="text-2xl font-bold text-purple-600">0 detik</p>
+            <div class="bg-white rounded-lg p-2 sm:p-3 text-center col-span-2">
+              <p class="text-xs sm:text-sm text-gray-600">Waktu Main</p>
+              <p id="playTime" class="text-xl sm:text-2xl font-bold text-purple-600">0 detik</p>
             </div>
           </div>
         </details>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <button onclick="skipWord()" class="py-3 bg-yellow-500 hover:bg-yellow-600 text-white font-bold rounded-xl shadow-md hover:shadow-lg transition-all">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-4">
+          <button onclick="skipWord()" class="py-2.5 sm:py-3 bg-yellow-500 hover:bg-yellow-600 text-white text-sm sm:text-base font-bold rounded-lg sm:rounded-xl shadow-md hover:shadow-lg transition-all">
             ⏭️ Skip Kata (-1 Nyawa)
           </button>
-          <button onclick="giveUp()" class="py-3 bg-red-500 hover:bg-red-600 text-white font-bold rounded-xl shadow-md hover:shadow-lg transition-all">
+          <button onclick="giveUp()" class="py-2.5 sm:py-3 bg-red-500 hover:bg-red-600 text-white text-sm sm:text-base font-bold rounded-lg sm:rounded-xl shadow-md hover:shadow-lg transition-all">
             🏳️ Menyerah
           </button>
-          <button onclick="resetGame()" class="py-3 bg-gray-600 hover:bg-gray-700 text-white font-bold rounded-xl shadow-md hover:shadow-lg transition-all">
+          <button onclick="resetGame()" class="py-2.5 sm:py-3 bg-gray-600 hover:bg-gray-700 text-white text-sm sm:text-base font-bold rounded-lg sm:rounded-xl shadow-md hover:shadow-lg transition-all">
             🔄 Restart
           </button>
         </div>
       </div>
 
-      <div id="gameOverScreen" style="display: none" class="glass-effect rounded-3xl shadow-2xl p-8 md:p-12 text-center">
-        <div class="mb-6">
-          <div class="inline-block bg-gradient-to-r from-red-500 to-orange-500 rounded-full p-6 mb-4">
-            <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div id="gameOverScreen" style="display: none" class="glass-effect rounded-2xl sm:rounded-3xl shadow-2xl p-4 sm:p-8 md:p-12 text-center">
+        <div class="mb-4 sm:mb-6">
+          <div class="inline-block bg-gradient-to-r from-red-500 to-orange-500 rounded-full p-4 sm:p-6 mb-3 sm:mb-4">
+            <svg class="w-16 h-16 sm:w-20 sm:h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
           </div>
-          <h2 class="text-4xl font-bold text-gray-800 mb-2">Game Over!</h2>
-          <p class="text-gray-600">Terima kasih sudah bermain!</p>
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-2">Game Over!</h2>
+          <p class="text-sm sm:text-base text-gray-600">Terima kasih sudah bermain!</p>
         </div>
 
-        <div class="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl p-8 mb-6 space-y-4">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="bg-white rounded-xl p-4">
-              <p class="text-sm text-gray-600 mb-1">Mode</p>
-              <p id="finalMode" class="text-2xl font-bold text-indigo-600"></p>
+        <div class="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl sm:rounded-2xl p-4 sm:p-8 mb-4 sm:mb-6 space-y-3 sm:space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4">
+            <div class="bg-white rounded-lg sm:rounded-xl p-3 sm:p-4">
+              <p class="text-xs sm:text-sm text-gray-600 mb-1">Mode</p>
+              <p id="finalMode" class="text-lg sm:text-2xl font-bold text-indigo-600"></p>
             </div>
-            <div class="bg-white rounded-xl p-4">
-              <p class="text-sm text-gray-600 mb-1">⭐ Skor Akhir</p>
-              <p id="finalScore" class="text-2xl font-bold text-yellow-600"></p>
+            <div class="bg-white rounded-lg sm:rounded-xl p-3 sm:p-4">
+              <p class="text-xs sm:text-sm text-gray-600 mb-1">⭐ Skor Akhir</p>
+              <p id="finalScore" class="text-lg sm:text-2xl font-bold text-yellow-600"></p>
             </div>
-            <div class="bg-white rounded-xl p-4">
-              <p class="text-sm text-gray-600 mb-1">🎯 Level Tercapai</p>
-              <p id="finalLevel" class="text-2xl font-bold text-blue-600"></p>
+            <div class="bg-white rounded-lg sm:rounded-xl p-3 sm:p-4">
+              <p class="text-xs sm:text-sm text-gray-600 mb-1">🎯 Level Tercapai</p>
+              <p id="finalLevel" class="text-lg sm:text-2xl font-bold text-blue-600"></p>
             </div>
-            <div class="bg-white rounded-xl p-4">
-              <p class="text-sm text-gray-600 mb-1">📝 Kata Selesai</p>
-              <p id="finalWords" class="text-2xl font-bold text-green-600"></p>
+            <div class="bg-white rounded-lg sm:rounded-xl p-3 sm:p-4">
+              <p class="text-xs sm:text-sm text-gray-600 mb-1">📝 Kata Selesai</p>
+              <p id="finalWords" class="text-lg sm:text-2xl font-bold text-green-600"></p>
             </div>
-            <div class="bg-white rounded-xl p-4">
-              <p class="text-sm text-gray-600 mb-1">🎯 Akurasi</p>
-              <p class="text-2xl font-bold text-purple-600"><span id="finalAccuracy"></span>%</p>
+            <div class="bg-white rounded-lg sm:rounded-xl p-3 sm:p-4">
+              <p class="text-xs sm:text-sm text-gray-600 mb-1">🎯 Akurasi</p>
+              <p class="text-lg sm:text-2xl font-bold text-purple-600"><span id="finalAccuracy"></span>%</p>
             </div>
-            <div class="bg-white rounded-xl p-4">
-              <p class="text-sm text-gray-600 mb-1">🔥 Streak Terbaik</p>
-              <p id="bestStreak" class="text-2xl font-bold text-orange-600"></p>
+            <div class="bg-white rounded-lg sm:rounded-xl p-3 sm:p-4">
+              <p class="text-xs sm:text-sm text-gray-600 mb-1">🔥 Streak Terbaik</p>
+              <p id="bestStreak" class="text-lg sm:text-2xl font-bold text-orange-600"></p>
             </div>
           </div>
-          <div class="bg-white rounded-xl p-4">
-            <p class="text-sm text-gray-600 mb-1">⏱️ Total Waktu</p>
-            <p class="text-2xl font-bold text-red-600"><span id="finalTime"></span> detik</p>
+          <div class="bg-white rounded-lg sm:rounded-xl p-3 sm:p-4">
+            <p class="text-xs sm:text-sm text-gray-600 mb-1">⏱️ Total Waktu</p>
+            <p class="text-lg sm:text-2xl font-bold text-red-600"><span id="finalTime"></span> detik</p>
           </div>
         </div>
 
-        <button onclick="location.reload()" class="w-full py-5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white text-xl font-bold rounded-xl shadow-lg hover:shadow-xl transform transition-all">
+        <button onclick="location.reload()" class="w-full py-4 sm:py-5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white text-lg sm:text-xl font-bold rounded-xl shadow-lg hover:shadow-xl transform transition-all">
           🎮 Main Lagi!
         </button>
       </div>
