@@ -470,10 +470,10 @@ function startGame() {
     gameMode === "survival"
       ? " (SURVIVAL MODE)"
       : gameMode === "speedrun"
-      ? " (SPEEDRUN MODE)"
-      : isHardMode
-      ? " (HARD MODE)"
-      : "";
+        ? " (SPEEDRUN MODE)"
+        : isHardMode
+          ? " (HARD MODE)"
+          : "";
 
   document.getElementById("languageTitle").textContent =
     languageTitles[currentLanguage] + modeSuffix;
@@ -633,10 +633,10 @@ function guessLetter() {
   if (found) {
     showMessage(
       '✅ Benar! Huruf "' +
-        input.toUpperCase() +
-        '" ada ' +
-        foundCount +
-        " kali!",
+      input.toUpperCase() +
+      '" ada ' +
+      foundCount +
+      " kali!",
       "green"
     );
     score += 10 * foundCount;
@@ -687,10 +687,12 @@ function guessFullWord() {
   } else {
     attemptsLeft--;
     wrongGuesses++;
+    updateDisplay(); 
 
     if (attemptsLeft <= 0) {
       lives--;
       streak = 0;
+      updateDisplay(); 
 
       if (lives <= 0 || gameMode === "speedrun") {
         showMessage('❌ Salah! Kata: "' + currentWordObj.word + '"', "red");
@@ -701,7 +703,6 @@ function guessFullWord() {
           '❌ Kesempatan habis! Kata: "' + currentWordObj.word + '" (-1 Nyawa)',
           "red"
         );
-        updateDisplay();
         setTimeout(loadNewWord, 2500);
       }
     } else {
@@ -709,7 +710,6 @@ function guessFullWord() {
     }
   }
 
-  updateDisplay();
   document.getElementById("fullWordInput").value = "";
 }
 
@@ -767,10 +767,10 @@ function wordCompleted() {
     score += streakBonus;
     showMessage(
       '🎉 Kata benar: "' +
-        currentWordObj.word +
-        '"! +' +
-        streakBonus +
-        " bonus streak!",
+      currentWordObj.word +
+      '"! +' +
+      streakBonus +
+      " bonus streak!",
       "green"
     );
   } else {
