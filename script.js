@@ -1,17 +1,12 @@
 const wordDatabase = {
   suroboyoan: [
-    {
-      word: "koncoku",
-      hint: "Teman dalam bahasa Surabaya",
-      category: "Sosial",
-    },
+    { word: "koncoku", hint: "Teman dalam bahasa Surabaya", category: "Sosial" },
     { word: "arek", hint: "Anak/orang muda", category: "Sosial" },
     { word: "sampean", hint: "Anda/kamu (sopan)", category: "Sapaan" },
     { word: "enyong", hint: "Saya/aku (kasar)", category: "Sapaan" },
     { word: "awakmu", hint: "Kamu", category: "Sapaan" },
     { word: "raimu", hint: "Wajahmu", category: "Tubuh" },
     { word: "matamu", hint: "Matamu", category: "Tubuh" },
-
     { word: "apik", hint: "Bagus/cantik", category: "Sifat" },
     { word: "elek", hint: "Jelek/buruk", category: "Sifat" },
     { word: "gedhe", hint: "Besar", category: "Sifat" },
@@ -20,7 +15,6 @@ const wordDatabase = {
     { word: "enteng", hint: "Ringan", category: "Sifat" },
     { word: "panas", hint: "Panas", category: "Sifat" },
     { word: "adhem", hint: "Dingin", category: "Sifat" },
-
     { word: "gelem", hint: "Mau/ingin", category: "Kata Kerja" },
     { word: "mangan", hint: "Makan", category: "Kata Kerja" },
     { word: "ngopi", hint: "Minum kopi", category: "Kata Kerja" },
@@ -29,36 +23,27 @@ const wordDatabase = {
     { word: "tangi", hint: "Bangun tidur", category: "Kata Kerja" },
     { word: "adus", hint: "Mandi", category: "Kata Kerja" },
     { word: "ngombe", hint: "Minum", category: "Kata Kerja" },
-
     { word: "omah", hint: "Rumah", category: "Benda" },
     { word: "pasar", hint: "Pasar", category: "Tempat" },
     { word: "sekolah", hint: "Sekolah", category: "Tempat" },
     { word: "dalan", hint: "Jalan", category: "Tempat" },
     { word: "kali", hint: "Sungai", category: "Tempat" },
-
     { word: "opo", hint: "Apa", category: "Tanya" },
     { word: "nang", hint: "Di", category: "Preposisi" },
     { word: "sopo", hint: "Siapa", category: "Tanya" },
     { word: "kapan", hint: "Kapan", category: "Tanya" },
     { word: "piye", hint: "Bagaimana", category: "Tanya" },
     { word: "ngendi", hint: "Dimana", category: "Tanya" },
-
     { word: "ngalor", hint: "Ke utara", category: "Arah" },
     { word: "ngidul", hint: "Ke selatan", category: "Arah" },
     { word: "ngulon", hint: "Ke barat", category: "Arah" },
     { word: "ngetan", hint: "Ke timur", category: "Arah" },
-
     { word: "sego", hint: "Nasi", category: "Makanan" },
     { word: "tahu", hint: "Tahu", category: "Makanan" },
     { word: "tempe", hint: "Tempe", category: "Makanan" },
     { word: "sambel", hint: "Sambal", category: "Makanan" },
-    {
-      word: "rawon",
-      hint: "Makanan khas Surabaya berkuah hitam",
-      category: "Makanan",
-    },
+    { word: "rawon", hint: "Makanan khas Surabaya berkuah hitam", category: "Makanan" },
     { word: "rujak", hint: "Rujak cingur", category: "Makanan" },
-
     { word: "esuk", hint: "Pagi", category: "Waktu" },
     { word: "siang", hint: "Siang", category: "Waktu" },
     { word: "sore", hint: "Sore", category: "Waktu" },
@@ -66,20 +51,10 @@ const wordDatabase = {
     { word: "sesuk", hint: "Besok", category: "Waktu" },
     { word: "wingi", hint: "Kemarin", category: "Waktu" },
   ],
-
   malangan: [
-    {
-      word: "isun",
-      hint: "Saya/aku dalam bahasa Malang",
-      category: "Sapaan",
-    },
-    {
-      word: "koen",
-      hint: "Kamu dalam bahasa Malang",
-      category: "Sapaan",
-    },
+    { word: "isun", hint: "Saya/aku dalam bahasa Malang", category: "Sapaan" },
+    { word: "koen", hint: "Kamu dalam bahasa Malang", category: "Sapaan" },
     { word: "awakmu", hint: "Kamu", category: "Sapaan" },
-
     { word: "ngenyek", hint: "Mengejek", category: "Kata Kerja" },
     { word: "mlaku", hint: "Jalan kaki", category: "Kata Kerja" },
     { word: "ngguyu", hint: "Tertawa", category: "Kata Kerja" },
@@ -87,7 +62,6 @@ const wordDatabase = {
     { word: "turu", hint: "Tidur", category: "Kata Kerja" },
     { word: "moco", hint: "Membaca", category: "Kata Kerja" },
     { word: "nulis", hint: "Menulis", category: "Kata Kerja" },
-
     { word: "gendut", hint: "Gemuk", category: "Sifat" },
     { word: "kurus", hint: "Kurus", category: "Sifat" },
     { word: "dhuwur", hint: "Tinggi", category: "Sifat" },
@@ -95,46 +69,24 @@ const wordDatabase = {
     { word: "wagu", hint: "Aneh/tidak bagus", category: "Sifat" },
     { word: "pinter", hint: "Pintar", category: "Sifat" },
     { word: "bodoh", hint: "Bodoh", category: "Sifat" },
-
-    {
-      word: "dokar",
-      hint: "Kendaraan tradisional beroda ditarik kuda",
-      category: "Benda",
-    },
+    { word: "dokar", hint: "Kendaraan tradisional beroda ditarik kuda", category: "Benda" },
     { word: "buku", hint: "Buku", category: "Benda" },
     { word: "meja", hint: "Meja", category: "Benda" },
     { word: "kursi", hint: "Kursi", category: "Benda" },
-
-    {
-      word: "bakso",
-      hint: "Makanan berkuah dengan bola daging",
-      category: "Makanan",
-    },
-    {
-      word: "ceker",
-      hint: "Ceker ayam pedas khas Malang",
-      category: "Makanan",
-    },
+    { word: "bakso", hint: "Makanan berkuah dengan bola daging", category: "Makanan" },
+    { word: "ceker", hint: "Ceker ayam pedas khas Malang", category: "Makanan" },
     { word: "apel", hint: "Buah khas Malang", category: "Makanan" },
-
     { word: "aloon", hint: "Alun-alun", category: "Tempat" },
-    {
-      word: "gunung",
-      hint: "Gunung (Malang banyak gunung)",
-      category: "Tempat",
-    },
+    { word: "gunung", hint: "Gunung (Malang banyak gunung)", category: "Tempat" },
     { word: "kampung", hint: "Kampung/desa", category: "Tempat" },
-
     { word: "apo", hint: "Apa", category: "Tanya" },
     { word: "sopo", hint: "Siapa", category: "Tanya" },
     { word: "kepiye", hint: "Bagaimana", category: "Tanya" },
     { word: "ngendi", hint: "Dimana", category: "Tanya" },
-
     { word: "esuk", hint: "Pagi", category: "Waktu" },
     { word: "awan", hint: "Siang", category: "Waktu" },
     { word: "sonten", hint: "Sore", category: "Waktu" },
     { word: "dalu", hint: "Malam", category: "Waktu" },
-
     { word: "ndue", hint: "Punya/memiliki", category: "Kata Kerja" },
     { word: "arep", hint: "Mau/akan", category: "Kata Kerja" },
     { word: "wis", hint: "Sudah", category: "Keterangan" },
@@ -144,28 +96,17 @@ const wordDatabase = {
     { word: "iso", hint: "Bisa", category: "Kemampuan" },
     { word: "ora", hint: "Tidak", category: "Negasi" },
   ],
-
   jawa: [
     { word: "sugeng", hint: "Selamat", category: "Sapaan" },
-    {
-      word: "panjenengan",
-      hint: "Anda (sangat sopan)",
-      category: "Sapaan",
-    },
+    { word: "panjenengan", hint: "Anda (sangat sopan)", category: "Sapaan" },
     { word: "kula", hint: "Saya (krama)", category: "Sapaan" },
     { word: "sampeyan", hint: "Anda (sopan)", category: "Sapaan" },
-
     { word: "dalem", hint: "Rumah (krama)", category: "Benda" },
     { word: "griya", hint: "Rumah (krama tinggi)", category: "Benda" },
     { word: "pepak", hint: "Lengkap", category: "Sifat" },
     { word: "serat", hint: "Buku/tulisan krama", category: "Benda" },
     { word: "wayang", hint: "Wayang kulit", category: "Budaya" },
-    {
-      word: "gamelan",
-      hint: "Alat musik tradisional Jawa",
-      category: "Budaya",
-    },
-
+    { word: "gamelan", hint: "Alat musik tradisional Jawa", category: "Budaya" },
     { word: "ndherek", hint: "Ikut (krama)", category: "Kata Kerja" },
     { word: "dhahar", hint: "Makan (krama)", category: "Kata Kerja" },
     { word: "tindak", hint: "Pergi (krama)", category: "Kata Kerja" },
@@ -174,248 +115,100 @@ const wordDatabase = {
     { word: "nyerat", hint: "Menulis (krama)", category: "Kata Kerja" },
     { word: "mireng", hint: "Mendengar (krama)", category: "Kata Kerja" },
     { word: "ningali", hint: "Melihat (krama)", category: "Kata Kerja" },
-
     { word: "sae", hint: "Baik (krama)", category: "Sifat" },
     { word: "awon", hint: "Buruk (krama)", category: "Sifat" },
     { word: "ageng", hint: "Besar (krama)", category: "Sifat" },
     { word: "alit", hint: "Kecil (krama)", category: "Sifat" },
     { word: "kathah", hint: "Banyak (krama)", category: "Jumlah" },
     { word: "sakedhik", hint: "Sedikit (krama)", category: "Jumlah" },
-
     { word: "punapa", hint: "Apa (krama)", category: "Tanya" },
     { word: "sinten", hint: "Siapa (krama)", category: "Tanya" },
     { word: "kapan", hint: "Kapan (krama)", category: "Tanya" },
-    {
-      word: "kados",
-      hint: "Seperti/bagaimana (krama)",
-      category: "Tanya",
-    },
+    { word: "kados", hint: "Seperti/bagaimana (krama)", category: "Tanya" },
     { word: "pundi", hint: "Dimana (krama)", category: "Tanya" },
-
     { word: "wonten", hint: "Ada (krama)", category: "Kata Kerja" },
     { word: "sampun", hint: "Sudah (krama)", category: "Keterangan" },
     { word: "dereng", hint: "Belum (krama)", category: "Keterangan" },
     { word: "mboten", hint: "Tidak (krama)", category: "Negasi" },
     { word: "inggih", hint: "Ya (krama)", category: "Jawaban" },
     { word: "boten", hint: "Tidak/bukan (krama)", category: "Negasi" },
-
     { word: "bapak", hint: "Ayah (krama)", category: "Keluarga" },
     { word: "ibu", hint: "Ibu (krama)", category: "Keluarga" },
-    {
-      word: "putra",
-      hint: "Anak laki-laki (krama)",
-      category: "Keluarga",
-    },
-    {
-      word: "putri",
-      hint: "Anak perempuan (krama)",
-      category: "Keluarga",
-    },
-
+    { word: "putra", hint: "Anak laki-laki (krama)", category: "Keluarga" },
+    { word: "putri", hint: "Anak perempuan (krama)", category: "Keluarga" },
     { word: "enjing", hint: "Pagi (krama)", category: "Waktu" },
     { word: "siyang", hint: "Siang (krama)", category: "Waktu" },
     { word: "sonten", hint: "Sore (krama)", category: "Waktu" },
     { word: "dalu", hint: "Malam (krama)", category: "Waktu" },
     { word: "benjang", hint: "Besok (krama)", category: "Waktu" },
     { word: "kala", hint: "Kemarin (krama)", category: "Waktu" },
-
-    {
-      word: "batik",
-      hint: "Kain tradisional bermotif",
-      category: "Budaya",
-    },
-    {
-      word: "keris",
-      hint: "Senjata tradisional Jawa",
-      category: "Budaya",
-    },
+    { word: "batik", hint: "Kain tradisional bermotif", category: "Budaya" },
+    { word: "keris", hint: "Senjata tradisional Jawa", category: "Budaya" },
     { word: "tembang", hint: "Lagu/nyanyian Jawa", category: "Budaya" },
     { word: "kenduri", hint: "Selamatan/syukuran", category: "Budaya" },
     { word: "ngalap", hint: "Mengambil (krama)", category: "Kata Kerja" },
   ],
-
   indonesia: [
-    {
-      word: "komputer",
-      hint: "Alat elektronik untuk bekerja",
-      category: "Teknologi",
-    },
-    {
-      word: "internet",
-      hint: "Jaringan komputer global",
-      category: "Teknologi",
-    },
+    { word: "komputer", hint: "Alat elektronik untuk bekerja", category: "Teknologi" },
+    { word: "internet", hint: "Jaringan komputer global", category: "Teknologi" },
     { word: "aplikasi", hint: "Program software", category: "Teknologi" },
-    {
-      word: "website",
-      hint: "Halaman di internet",
-      category: "Teknologi",
-    },
+    { word: "website", hint: "Halaman di internet", category: "Teknologi" },
     { word: "smartphone", hint: "Telepon pintar", category: "Teknologi" },
     { word: "laptop", hint: "Komputer portable", category: "Teknologi" },
-
     { word: "sekolah", hint: "Tempat menuntut ilmu", category: "Tempat" },
     { word: "universitas", hint: "Perguruan tinggi", category: "Tempat" },
-    {
-      word: "perpustakaan",
-      hint: "Tempat menyimpan banyak buku",
-      category: "Tempat",
-    },
-    {
-      word: "belajar",
-      hint: "Aktivitas menuntut ilmu",
-      category: "Kata Kerja",
-    },
+    { word: "perpustakaan", hint: "Tempat menyimpan banyak buku", category: "Tempat" },
+    { word: "belajar", hint: "Aktivitas menuntut ilmu", category: "Kata Kerja" },
     { word: "guru", hint: "Orang yang mengajar", category: "Profesi" },
     { word: "murid", hint: "Orang yang belajar", category: "Profesi" },
-    {
-      word: "mahasiswa",
-      hint: "Pelajar universitas",
-      category: "Profesi",
-    },
-    {
-      word: "dosen",
-      hint: "Pengajar di universitas",
-      category: "Profesi",
-    },
-
+    { word: "mahasiswa", hint: "Pelajar universitas", category: "Profesi" },
+    { word: "dosen", hint: "Pengajar di universitas", category: "Profesi" },
     { word: "buku", hint: "Media untuk membaca", category: "Alat Tulis" },
-    {
-      word: "pensil",
-      hint: "Alat tulis yang bisa dihapus",
-      category: "Alat Tulis",
-    },
+    { word: "pensil", hint: "Alat tulis yang bisa dihapus", category: "Alat Tulis" },
     { word: "pulpen", hint: "Alat tulis tinta", category: "Alat Tulis" },
-    {
-      word: "penghapus",
-      hint: "Alat untuk menghapus tulisan",
-      category: "Alat Tulis",
-    },
-    {
-      word: "penggaris",
-      hint: "Alat untuk membuat garis lurus",
-      category: "Alat Tulis",
-    },
-    {
-      word: "kamus",
-      hint: "Buku untuk cari arti kata",
-      category: "Alat Tulis",
-    },
+    { word: "penghapus", hint: "Alat untuk menghapus tulisan", category: "Alat Tulis" },
+    { word: "penggaris", hint: "Alat untuk membuat garis lurus", category: "Alat Tulis" },
+    { word: "kamus", hint: "Buku untuk cari arti kata", category: "Alat Tulis" },
     { word: "kertas", hint: "Media menulis", category: "Alat Tulis" },
-
-    {
-      word: "teman",
-      hint: "Orang yang menemani kita",
-      category: "Sosial",
-    },
+    { word: "teman", hint: "Orang yang menemani kita", category: "Sosial" },
     { word: "sahabat", hint: "Teman dekat", category: "Sosial" },
-    {
-      word: "keluarga",
-      hint: "Orang-orang terdekat",
-      category: "Sosial",
-    },
-    {
-      word: "tetangga",
-      hint: "Orang yang tinggal di sekitar rumah",
-      category: "Sosial",
-    },
-
+    { word: "keluarga", hint: "Orang-orang terdekat", category: "Sosial" },
+    { word: "tetangga", hint: "Orang yang tinggal di sekitar rumah", category: "Sosial" },
     { word: "makanan", hint: "Yang kita makan", category: "Konsumsi" },
     { word: "minuman", hint: "Yang kita minum", category: "Konsumsi" },
     { word: "sarapan", hint: "Makan pagi", category: "Konsumsi" },
-    {
-      word: "makan",
-      hint: "Aktivitas mengonsumsi makanan",
-      category: "Kata Kerja",
-    },
-    {
-      word: "minum",
-      hint: "Aktivitas mengonsumsi cairan",
-      category: "Kata Kerja",
-    },
+    { word: "makan", hint: "Aktivitas mengonsumsi makanan", category: "Kata Kerja" },
+    { word: "minum", hint: "Aktivitas mengonsumsi cairan", category: "Kata Kerja" },
     { word: "masak", hint: "Membuat makanan", category: "Kata Kerja" },
-
-    {
-      word: "sepeda",
-      hint: "Kendaraan roda dua kayuh",
-      category: "Transportasi",
-    },
-    {
-      word: "motor",
-      hint: "Kendaraan roda dua bermesin",
-      category: "Transportasi",
-    },
-    {
-      word: "mobil",
-      hint: "Kendaraan roda empat",
-      category: "Transportasi",
-    },
-    {
-      word: "bus",
-      hint: "Kendaraan umum besar",
-      category: "Transportasi",
-    },
-    {
-      word: "kereta",
-      hint: "Transportasi rel",
-      category: "Transportasi",
-    },
-    {
-      word: "pesawat",
-      hint: "Alat transportasi udara",
-      category: "Transportasi",
-    },
-
+    { word: "sepeda", hint: "Kendaraan roda dua kayuh", category: "Transportasi" },
+    { word: "motor", hint: "Kendaraan roda dua bermesin", category: "Transportasi" },
+    { word: "mobil", hint: "Kendaraan roda empat", category: "Transportasi" },
+    { word: "bus", hint: "Kendaraan umum besar", category: "Transportasi" },
+    { word: "kereta", hint: "Transportasi rel", category: "Transportasi" },
+    { word: "pesawat", hint: "Alat transportasi udara", category: "Transportasi" },
     { word: "pohon", hint: "Tumbuhan besar berkayu", category: "Alam" },
-    {
-      word: "bunga",
-      hint: "Bagian tanaman berwarna indah",
-      category: "Alam",
-    },
+    { word: "bunga", hint: "Bagian tanaman berwarna indah", category: "Alam" },
     { word: "gunung", hint: "Dataran tinggi", category: "Alam" },
     { word: "laut", hint: "Perairan luas asin", category: "Alam" },
     { word: "sungai", hint: "Aliran air alami", category: "Alam" },
     { word: "danau", hint: "Genangan air luas", category: "Alam" },
-
     { word: "hujan", hint: "Air turun dari langit", category: "Cuaca" },
     { word: "panas", hint: "Suhu tinggi", category: "Cuaca" },
     { word: "dingin", hint: "Suhu rendah", category: "Cuaca" },
     { word: "mendung", hint: "Langit tertutup awan", category: "Cuaca" },
     { word: "cerah", hint: "Langit terang", category: "Cuaca" },
-
     { word: "hari", hint: "24 jam", category: "Waktu" },
     { word: "minggu", hint: "7 hari", category: "Waktu" },
-    {
-      word: "bulan",
-      hint: "30 hari atau satelit bumi",
-      category: "Waktu",
-    },
+    { word: "bulan", hint: "30 hari atau satelit bumi", category: "Waktu" },
     { word: "tahun", hint: "12 bulan", category: "Waktu" },
     { word: "pagi", hint: "Waktu awal hari", category: "Waktu" },
     { word: "siang", hint: "Waktu tengah hari", category: "Waktu" },
     { word: "sore", hint: "Waktu menjelang malam", category: "Waktu" },
     { word: "malam", hint: "Waktu gelap", category: "Waktu" },
-
-    {
-      word: "sepakbola",
-      hint: "Olahraga menendang bola",
-      category: "Olahraga",
-    },
-    {
-      word: "basket",
-      hint: "Olahraga memasukkan bola ke ring",
-      category: "Olahraga",
-    },
-    {
-      word: "voli",
-      hint: "Olahraga memantulkan bola di net",
-      category: "Olahraga",
-    },
-    {
-      word: "bulutangkis",
-      hint: "Olahraga pakai raket dan kok",
-      category: "Olahraga",
-    },
+    { word: "sepakbola", hint: "Olahraga menendang bola", category: "Olahraga" },
+    { word: "basket", hint: "Olahraga memasukkan bola ke ring", category: "Olahraga" },
+    { word: "voli", hint: "Olahraga memantulkan bola di net", category: "Olahraga" },
+    { word: "bulutangkis", hint: "Olahraga pakai raket dan kok", category: "Olahraga" },
   ],
 };
 
@@ -443,17 +236,22 @@ let playTime = 0;
 
 function startGame() {
   currentLanguage = document.getElementById("languageSelect").value;
-  isHardMode = document.getElementById("hardMode").checked;
   gameMode = document.querySelector('input[name="gameMode"]:checked').value;
+
+  // Set isHardMode berdasarkan gameMode
+  isHardMode = (gameMode === "hard");
 
   if (gameMode === "survival") {
     lives = 1;
     hintBonusCount = 0;
     isHardMode = true;
-  } else if (isHardMode) {
+  } else if (gameMode === "hard") {
     lives = 3;
+    hintBonusCount = 3;
+    gameMode = "classic"; // Hard mode uses classic mechanics
   } else {
     lives = 5;
+    hintBonusCount = 3;
   }
 
   document.getElementById("setupScreen").style.display = "none";
@@ -482,12 +280,15 @@ function startGame() {
     document.getElementById("classicMode").style.display = "none";
     document.getElementById("speedrunMode").style.display = "block";
     document.getElementById("timerDisplay").style.display = "block";
+    document.getElementById("statsGrid").style.display = "none";
     document.getElementById("gameStats").style.display = "none";
     startSpeedrunTimer();
   } else {
     document.getElementById("classicMode").style.display = "block";
     document.getElementById("speedrunMode").style.display = "none";
     document.getElementById("timerDisplay").style.display = "none";
+    document.getElementById("statsGrid").style.display = "grid";
+    document.getElementById("gameStats").style.display = "block";
   }
 
   startTime = Date.now();
@@ -523,11 +324,11 @@ function updateTimerDisplay() {
     "⏱️ Waktu: " + timeRemaining + " detik";
 
   if (timeRemaining < 10) {
-    document.getElementById("timerDisplay").style.color = "red";
+    document.getElementById("timerDisplay").style.color = "#dc2626";
   } else if (timeRemaining < 30) {
-    document.getElementById("timerDisplay").style.color = "orange";
+    document.getElementById("timerDisplay").style.color = "#ea580c";
   } else {
-    document.getElementById("timerDisplay").style.color = "green";
+    document.getElementById("timerDisplay").style.color = "#16a34a";
   }
 }
 
@@ -687,12 +488,12 @@ function guessFullWord() {
   } else {
     attemptsLeft--;
     wrongGuesses++;
-    updateDisplay(); 
+    updateDisplay();
 
     if (attemptsLeft <= 0) {
       lives--;
       streak = 0;
-      updateDisplay(); 
+      updateDisplay();
 
       if (lives <= 0 || gameMode === "speedrun") {
         showMessage('❌ Salah! Kata: "' + currentWordObj.word + '"', "red");
