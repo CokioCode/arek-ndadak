@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Game Tebak Kata - Multi Bahasa</title>
+  </head>
+  <body>
+    <h1>🎮 Game Tebak Kata Multi Bahasa</h1>
+
+    <div id="gameContainer">
+      <div id="setupScreen">
+        <h2>Pilih Bahasa:</h2>
+        <select id="languageSelect">
+          <option value="suroboyoan">Suroboyoan (50+ kata)</option>
+          <option value="malangan">Malangan (40+ kata)</option>
+          <option value="jawa">Jawa Krama (50+ kata)</option>
+          <option value="indonesia">Indonesia (60+ kata)</option>
+        </select>
+        <br /><br />
+        <h3>Pilih Mode Game:</h3>
+        <label>
+          <input type="radio" name="gameMode" value="classic" checked /> Classic
+          (Tebak per huruf)
+        </label>
+        <br />
+        <label>
+          <input type="radio" name="gameMode" value="speedrun" /> Speedrun
+          (Tebak kata penuh, 60 detik!)
+        </label>
+        <br />
+        <label>
+          <input type="radio" name="gameMode" value="survival" /> Survival (1
+          nyawa, tanpa hint!)
+        </label>
+        <br /><br />
+        <label>
+          <input type="checkbox" id="hardMode" /> Mode Sulit (Nyawa 3, tanpa
+          kategori)
+        </label>
+        <br /><br />
+        <button onclick="startGame()">Mulai Game</button>
+      </div>
+
+      <div id="gameScreen" style="display: none">
+        <h2 id="languageTitle"></h2>
+        <p id="gameStats">
+          Nyawa: <span id="lives">5</span> ❤️ | Skor:
+          <span id="score">0</span> ⭐ | Level: <span id="level">1</span> |
+          Streak: <span id="streak">0</span> 🔥
+        </p>
+        <p
+          id="timerDisplay"
+          style="display: none; font-size: 20px; color: red"
+        ></p>
+
+        <hr />
+
+        <div id="categoryHint"></div>
+        <h3>Hint:</h3>
+        <p id="hint"></p>
+
+        <h3>Kata yang ditebak:</h3>
+        <p
+          id="wordDisplay"
+          style="font-size: 24px; letter-spacing: 5px; font-family: monospace"
+        ></p>
+        <p style="color: gray">
+          Panjang kata: <span id="wordLength"></span> huruf
+        </p>
+
+        <div id="classicMode">
+          <h3>Tebak Huruf:</h3>
+          <input
+            type="text"
+            id="guessInput"
+            maxlength="1"
+            placeholder="Ketik 1 huruf"
+            autocomplete="off"
+          />
+          <button onclick="guessLetter()">Tebak!</button>
+          <button onclick="useHintBonus()">
+            Buka 1 Huruf (Bonus: <span id="hintBonus">3</span>)
+          </button>
+          <p>
+            Huruf yang sudah ditebak:
+            <span id="guessedLetters" style="font-family: monospace"></span>
+          </p>
+        </div>
+
+        <div id="speedrunMode" style="display: none">
+          <h3>Tebak Kata Lengkap:</h3>
+          <input
+            type="text"
+            id="fullWordInput"
+            placeholder="Ketik kata lengkap"
+            autocomplete="off"
+          />
+          <button onclick="guessFullWord()">Tebak!</button>
+          <p>Kesempatan tersisa: <span id="attemptsLeft">3</span> / 3</p>
+        </div>
+
+        <p id="message" style="font-weight: bold"></p>
+
+        <details>
+          <summary>📊 Statistik Game</summary>
+          <p>Total Kata Selesai: <span id="totalWords">0</span></p>
+          <p>Akurasi: <span id="accuracy">100</span>%</p>
+          <p>Tebakan Benar: <span id="correctGuesses">0</span></p>
+          <p>Tebakan Salah: <span id="wrongGuesses">0</span></p>
+          <p>Waktu Main: <span id="playTime">0</span> detik</p>
+        </details>
+
+        <hr />
+        <button onclick="skipWord()">Skip Kata (-1 Nyawa)</button>
+        <button onclick="giveUp()">Menyerah & Lihat Jawaban</button>
+        <button onclick="resetGame()">Restart Game</button>
+      </div>
+
+      <div id="gameOverScreen" style="display: none">
+        <h2>Game Over!</h2>
+        <p>Mode: <span id="finalMode"></span></p>
+        <p>Skor Akhir: <span id="finalScore"></span> ⭐</p>
+        <p>Level Tercapai: <span id="finalLevel"></span></p>
+        <p>Kata Selesai: <span id="finalWords"></span></p>
+        <p>Akurasi: <span id="finalAccuracy"></span>%</p>
+        <p>Streak Terbaik: <span id="bestStreak"></span> 🔥</p>
+        <p>Total Waktu: <span id="finalTime"></span> detik</p>
+        <button onclick="location.reload()">Main Lagi</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
